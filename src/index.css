@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Styles */
+@layer base {
+  body {
+    @apply bg-background text-text-primary;
+  }
+  
+  .dark {
+    --primary: #818cf8;
+    --secondary: #c7d2fe;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+  }
+}
+
+@layer components {
+  /* Glass Morphism Effect */
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/10;
+  }
+
+  /* Custom Button */
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-2 rounded-lg transition-all;
+    @apply hover:bg-primary/90 hover:shadow-lg;
+    @apply focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+
+  /* Custom Card */
+  .card {
+    @apply bg-surface rounded-xl shadow-sm p-6;
+    @apply transition-all hover:shadow-md;
+    @apply border border-opacity-10;
+  }
+}
