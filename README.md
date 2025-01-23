@@ -1,6 +1,6 @@
 # Digital Inclusion Hub
 
-![Digital Inclusion Hub Logo](https://example.com/logo.png) <!-- Replace with actual logo URL -->
+![Digital Inclusion Hub Logo](https://via.placeholder.com/150) <!-- Replace with actual logo URL -->
 
 Welcome to the **Digital Inclusion Hub**! This project aims to empower seniors and other users by providing easy-to-follow guides, resources, and community support for navigating the digital world safely and confidently.
 
@@ -22,11 +22,11 @@ Welcome to the **Digital Inclusion Hub**! This project aims to empower seniors a
 
 ## Technologies Used
 
-![React Logo](https://example.com/react-logo.png) <!-- Replace with actual React logo URL -->
-![TypeScript Logo](https://example.com/typescript-logo.png) <!-- Replace with actual TypeScript logo URL -->
-![Tailwind CSS Logo](https://example.com/tailwind-logo.png) <!-- Replace with actual Tailwind CSS logo URL -->
-![Vite Logo](https://example.com/vite-logo.png) <!-- Replace with actual Vite logo URL -->
-![Firebase Logo](https://example.com/firebase-logo.png) <!-- Replace with actual Firebase logo URL -->
+![React Logo](https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg) <!-- React logo -->
+![TypeScript Logo](https://upload.wikimedia.org/wikipedia/commons/4/4c TypeScript_logo_2020.svg) <!-- TypeScript logo -->
+![Tailwind CSS Logo](https://upload.wikimedia.org/wikipedia/commons/d/d0/Tailwind_CSS_Logo.svg) <!-- Tailwind CSS logo -->
+![Vite Logo](https://vitejs.dev/logo.svg) <!-- Vite logo -->
+![Firebase Logo](https://firebase.google.com/images/brand-guidelines/logo-logomark.png) <!-- Firebase logo -->
 
 - **Frontend**: 
   - React
