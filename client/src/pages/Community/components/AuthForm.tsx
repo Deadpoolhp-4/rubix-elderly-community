@@ -32,28 +32,29 @@ const AuthForm: React.FC<{ onAuth: (email: string, password: string, isAdmin: bo
       <div className="flex items-center">
         <label className="mr-2">User</label>
         <input
-          type="checkbox"
-          checked={isAdmin}
-          onChange={() => setIsAdmin(!isAdmin)}
+          type="radio"
+          checked={!isAdmin}
+          onChange={() => setIsAdmin(false)}
           className="toggle-switch"
         />
-        <label className="ml-2">Admin</label>
+        <label className="ml-2 mr-3">Admin</label>
+        <input
+          type="radio"
+          checked={isAdmin}
+          onChange={() => setIsAdmin(true)}
+          className="toggle-switch"
+        />
       </div>
-      <div className="flex space-x-4">
-        <button
-          type="button"
-          onClick={() => setIsSignup(false)}
-          className={`btn-primary ${!isSignup ? 'bg-primary text-white' : 'bg-transparent text-primary'}`}
+      
+
+      <div className="text-text-secondary">
+        {isSignup ? 'Already have an account?' : "Don't have an account?"}
+        <span
+          onClick={() => setIsSignup(prev => !prev)}
+          className="cursor-pointer text-primary ml-1"
         >
-          Login
-        </button>
-        <button
-          type="button"
-          onClick={() => setIsSignup(true)}
-          className={`btn-primary ${isSignup ? 'bg-primary text-white' : 'bg-transparent text-primary'}`}
-        >
-          Sign Up
-        </button>
+          {isSignup ? 'Login' : 'Sign Up'}
+        </span>
       </div>
       <button type="submit" className="btn-primary w-full">
         {isSignup ? 'Create Account' : 'Login'}

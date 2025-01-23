@@ -4,7 +4,7 @@ import { Home, Shield, BookOpen, CreditCard, Video, Share2, Users } from 'lucide
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Navigation = () => {
-  const [fontSize, setFontSize] = useState('medium')
+  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large' | 'xlarge'>('medium')
   const [darkMode, setDarkMode] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
@@ -21,8 +21,8 @@ const Navigation = () => {
     { path: '/guides', icon: BookOpen, label: 'Guides' },
     { path: '/banking', icon: CreditCard, label: 'Banking' },
     { path: '/safety', icon: Shield, label: 'Safety' },
-    { path: '/video-calls', icon: Video, label: 'Video Calls' },
-    { path: '/social-media', icon: Share2, label: 'Social Media' },
+    { path: '/video-calls', icon: Video, label: 'VideoCalls' },
+    { path: '/social-media', icon: Share2, label: 'SocialMedia' },
     { path: '/community', icon: Users, label: 'Community' }
   ]
 
@@ -32,20 +32,21 @@ const Navigation = () => {
   }, [location.pathname])
 
   return (
-    <nav className={`${fontSizes[fontSize]} glass fixed top-0 w-full z-50`}>
+    <nav className={`${fontSizes[fontSize]} glass fixed top-0 w-full z-50 ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <motion.div
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.9 }}
               className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center cursor-pointer"
             >
               <Home className="w-6 h-6 text-white" />
             </motion.div>
             <h1 className="text-2xl font-bold text-text-primary">
-              Digital Inclusion Hub
+              Digital 
+              <br></br>Inclusion Hub
             </h1>
           </div>
 

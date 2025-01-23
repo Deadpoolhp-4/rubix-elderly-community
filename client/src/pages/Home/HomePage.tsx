@@ -8,37 +8,43 @@ const HomePage = () => {
       icon: BookOpen,
       title: 'Digital Skills Guides',
       description: 'Step-by-step tutorials for essential digital skills',
-      color: 'text-blue-500'
+      color: 'text-blue-500',
+      link: '/Guides'
     },
     {
       icon: CreditCard,
       title: 'Safe Online Banking',
       description: 'Master online banking with confidence and security',
-      color: 'text-green-500'
+      color: 'text-green-500',
+      link: '/Banking'
     },
     {
       icon: Shield,
       title: 'Online Safety',
       description: 'Learn to protect yourself from online threats',
-      color: 'text-yellow-500'
+      color: 'text-yellow-500',
+      link: '/Safety'
     },
     {
       icon: Video,
       title: 'Video Calls',
       description: 'Connect with loved ones through video calls',
-      color: 'text-purple-500'
+      color: 'text-purple-500',
+      link: '/Video-Calls'
     },
     {
       icon: Share2,
       title: 'Social Media',
       description: 'Stay connected with family and friends',
-      color: 'text-pink-500'
+      color: 'text-pink-500',
+      link: '/Social-Media'
     },
     {
       icon: Users,
       title: 'Community Support',
       description: 'Get help and share experiences with others',
-      color: 'text-indigo-500'
+      color: 'text-indigo-500',
+      link: '/Community'
     }
   ]
 
@@ -72,7 +78,7 @@ const HomePage = () => {
             Your friendly guide to mastering digital technology safely and confidently
           </p>
           <div className="flex justify-center space-x-4">
-            <button className="btn-primary">
+            <button className="btn-primary" onClick={() => window.location.href = '/#features'}>
               Get Started
             </button>
             <button className="btn-primary bg-transparent border border-primary text-primary hover:bg-primary/10">
@@ -83,7 +89,8 @@ const HomePage = () => {
       </div>
 
       {/* Features Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      
+      <div id="features" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-text-primary mb-4">
             What We Offer
@@ -92,13 +99,17 @@ const HomePage = () => {
             Explore our comprehensive features designed to help you navigate the digital world
           </p>
         </div>
-
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <FeatureCard key={index} {...feature} />
           ))}
         </div>
       </div>
+           
+      
+      
+      
 
       {/* Testimonial Section */}
       <div className="bg-surface py-20">

@@ -2,7 +2,15 @@ import { useState } from 'react'
 import { doc, updateDoc, arrayUnion } from 'firebase/firestore'
 import { db } from '../../../firebase'
 
-const DiscussionCard = ({ discussion, isAdmin, onDelete }: { discussion: any; isAdmin: boolean; onDelete: () => void }) => {
+interface DiscussionCardProps {
+  discussion: any;
+  isAdmin: boolean;
+  onDelete: () => void;
+  onUpvote: () => Promise<void>;
+  onDownvote: () => Promise<void>;
+}
+
+const DiscussionCard = ({ discussion, isAdmin, onDelete }: DiscussionCardProps) => {
   const [newComment, setNewComment] = useState('')
   const [showComments, setShowComments] = useState(false)
 
@@ -61,7 +69,7 @@ const DiscussionCard = ({ discussion, isAdmin, onDelete }: { discussion: any; is
             <div key={index} className="pl-4 border-l-2 border-surface">
               <p className="text-text-secondary">{comment.content}</p>
               <p className="text-sm text-text-secondary">
-                {new Date(comment.timestamp?.toDate()).toLocaleString()}
+                {new Date(comment.time?.toDate()).toLocaleString()}
               </p>
             </div>
           ))}

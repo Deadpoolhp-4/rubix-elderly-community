@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
-const SignupForm: React.FC<{ onSignup: (email: string, isAdmin: boolean) => void }> = ({ onSignup }) => {
+const SignupForm: React.FC<{ onSignup: (email: string, username: string, isAdmin: boolean) => void }> = ({ onSignup }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [username, setUsername] = useState(''); // New state for username
   const [isAdmin, setIsAdmin] = useState(false); // State to track user type
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,7 +12,7 @@ const SignupForm: React.FC<{ onSignup: (email: string, isAdmin: boolean) => void
     try {
       const auth = getAuth();
       await createUserWithEmailAndPassword(auth, email, password);
-      onSignup(email, isAdmin); // Pass user type to onSignup
+      onSignup(email, username, isAdmin); // Pass username to onSignup
     } catch (error) {
       console.error('Signup error:', error);
     }
@@ -19,6 +20,14 @@ const SignupForm: React.FC<{ onSignup: (email: string, isAdmin: boolean) => void
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <input
+        type="text"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+        placeholder="Username"
+        className="w-full p-2 rounded-lg bg-surface border border-surface focus:border-primary focus:ring-2 focus:ring-primary"
+        required
+      />
       <input
         type="email"
         value={email}

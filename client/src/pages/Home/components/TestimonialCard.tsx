@@ -1,6 +1,6 @@
-const TestimonialCard = ({ name, testimonial, image }) => {
+const TestimonialCard = ({ name, testimonial, image }: { name: string, testimonial: string, image: string }) => {
   return (
-    <div className="card p-8">
+    <div className="card p-8 border border-gray-200 rounded-lg shadow-md hover:shadow-lg transition-shadow">
       <div className="flex items-center space-x-4 mb-6">
         <img 
           src={image}

@@ -24,7 +24,14 @@ const ForumsPage = ({ user }: { user: any }) => {
         <h1 className="text-4xl font-bold text-text-primary mb-8">Community Discussions</h1>
         <div className="space-y-4">
           {discussions.map((discussion: any) => (
-            <DiscussionCard key={discussion.id} discussion={discussion} isAdmin={user?.isAdmin} onDelete={() => {}} />
+            <DiscussionCard 
+              key={discussion.id} 
+              discussion={discussion} 
+              isAdmin={user?.isAdmin} 
+              onDelete={async () => {}} 
+              onUpvote={async () => {}}
+              onDownvote={async () => {}}
+            />
           ))}
         </div>
       </div>

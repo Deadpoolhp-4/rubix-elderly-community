@@ -9,6 +9,7 @@ import VideoCallsPage from './pages/VideoCalls/VideoCallsPage'
 import SocialMediaPage from './pages/SocialMedia/SocialMediaPage'
 import ForumsPage from './pages/Community/ForumsPage'
 import { useAuth } from './hooks/useAuth'
+import Footer from './components/Footer'
 
 function App() {
   const { user } = useAuth()
@@ -19,14 +20,15 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/guides" element={<GuidesPage />} />
-          <Route path="/banking" element={<BankingPage />} />
-          <Route path="/community" element={<CommunityPage />} />
-          <Route path="/safety" element={<SafetyPage />} />
-          <Route path="/video-calls" element={<VideoCallsPage />} />
-          <Route path="/social-media" element={<SocialMediaPage />} />
-          <Route path="/forums" element={user ? <ForumsPage user={user} /> : <Navigate to="/login" />} />
+          <Route path="/Guides" element={<GuidesPage />} />
+          <Route path="/Banking" element={<BankingPage />} />
+          <Route path="/Community" element={<CommunityPage />} />
+          <Route path="/Safety" element={<SafetyPage />} />
+          <Route path="/Video-Calls" element={<VideoCallsPage />} />
+          <Route path="/Social-Media" element={<SocialMediaPage />} />
+          <Route path="/Forums" element={user ? <ForumsPage user={user} /> : <Navigate to="/login" />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   )

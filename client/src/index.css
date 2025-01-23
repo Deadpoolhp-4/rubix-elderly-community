@@ -38,3 +38,7 @@
     @apply border border-opacity-10;
   }
 }
+
+html {
+  scroll-behavior: smooth;
+}
