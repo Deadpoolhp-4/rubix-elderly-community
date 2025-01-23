@@ -2,8 +2,16 @@ import { useState } from 'react'
 import SafetyCard from './components/SafetyCard'
 import SafetyContent from './components/SafetyContent'
 
+// Define the Topic type
+type Topic = {
+  id: string;
+  title: string;
+  icon: string;
+  content: string[];
+}
+
 const SafetyPage = () => {
-  const [selectedTopic, setSelectedTopic] = useState(null)
+  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null)
 
   const topics = [
     {

@@ -2,8 +2,17 @@ import { useState } from 'react'
 import SocialMediaCard from './components/SocialMediaCard'
 import SocialMediaContent from './components/SocialMediaContent'
 
+// Define the Platform type
+type Platform = {
+  id: string;
+  title: string;
+  icon: string;
+  steps: string[];
+  videoUrl: string;
+}
+
 const SocialMediaPage = () => {
-  const [selectedPlatform, setSelectedPlatform] = useState(null)
+  const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(null)
 
   const platforms = [
     {
@@ -17,7 +26,7 @@ const SocialMediaPage = () => {
         'Post updates and photos',
         'Use privacy settings to control who sees your content'
       ],
-      videoUrl: 'https://www.youtube.com/embed/mrPJ3V5jv4M'
+      videoUrl: 'https://www.youtube.com/embed/xu8rh9Ref4Y'
     },
     {
       id: 'whatsapp',
@@ -30,7 +39,7 @@ const SocialMediaPage = () => {
         'Send messages and make calls',
         'Create and join group chats'
       ],
-      videoUrl: 'https://www.youtube.com/embed/fV6UxFV2aWM'
+      videoUrl: 'https://www.youtube.com/embed/y3EdIiJeTXk'
     },
     {
       id: 'instagram',
@@ -43,7 +52,7 @@ const SocialMediaPage = () => {
         'Post photos and stories',
         'Explore content through the feed'
       ],
-      videoUrl: 'https://www.youtube.com/embed/CK1nZ8fV4wU'
+      videoUrl: 'https://www.youtube.com/embed/RaJGtAAWOmo'
     }
   ]
 

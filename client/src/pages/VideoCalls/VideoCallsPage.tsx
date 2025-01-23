@@ -2,8 +2,17 @@ import { useState } from 'react'
 import VideoCallCard from './components/VideoCallCard'
 import VideoCallContent from './components/VideoCallContent'
 
+// Define the Topic type
+type Topic = {
+  id: string;
+  title: string;
+  icon: string;
+  steps: string[];
+  videoUrl: string;
+}
+
 const VideoCallsPage = () => {
-  const [selectedTopic, setSelectedTopic] = useState(null)
+  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null)
 
   const topics = [
     {
@@ -17,7 +26,7 @@ const VideoCallsPage = () => {
         'Invite participants via email or link',
         'Use the chat and reactions features'
       ],
-      videoUrl: 'https://www.youtube.com/embed/hIkCmbvAHQQ'
+      videoUrl: 'https://www.youtube.com/embed/fMUxzrgZvZQ'
     },
     {
       id: 'troubleshooting',
@@ -43,7 +52,7 @@ const VideoCallsPage = () => {
         'Share your screen with participants',
         'Use breakout rooms for group discussions'
       ],
-      videoUrl: 'https://www.youtube.com/embed/9zqHlgD7m2U'
+      videoUrl: 'https://www.youtube.com/embed/dXQTPrAlP10'
     }
   ]
 

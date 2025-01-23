@@ -2,8 +2,16 @@ import { useState } from 'react'
 import BankingCard from './components/BankingCard'
 import BankingContent from './components/BankingContent'
 
+// Define the Topic type
+type Topic = {
+  id: string;
+  title: string;
+  icon: string;
+  steps: string[];
+}
+
 const BankingPage = () => {
-  const [selectedTopic, setSelectedTopic] = useState(null)
+  const [selectedTopic, setSelectedTopic] = useState<Topic | null>(null)
 
   const topics = [
     {

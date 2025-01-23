@@ -3,7 +3,7 @@ import GuideCard from './components/GuideCard'
 import GuideContent from './components/GuideContent'
 
 const GuidesPage = () => {
-  const [selectedGuide, setSelectedGuide] = useState(null)
+  const [selectedGuide, setSelectedGuide] = useState<{ id: string; title: string } | null>(null)
 
   const guides = [
     {
@@ -17,6 +17,8 @@ const GuidesPage = () => {
         'Write your message in the body',
         'Click "Send" to deliver your email'
       ]
+      
+
     },
     {
       id: 'smartphone',
@@ -45,9 +47,9 @@ const GuidesPage = () => {
   ]
 
   return (
-    <div className="pt-20 min-h-screen">
+    <div className="pt-20 min-h-screen bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-text-primary mb-8">
+        <h1 className="text-5xl font-bold text-text-primary mb-8 text-center">
           Step-by-Step Guides
         </h1>
         
