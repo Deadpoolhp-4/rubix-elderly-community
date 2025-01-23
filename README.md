@@ -1,5 +1,7 @@
 # Digital Inclusion Hub
 
+![Digital Inclusion Hub Logo](https://example.com/logo.png) <!-- Replace with actual logo URL -->
+
 Welcome to the **Digital Inclusion Hub**! This project aims to empower seniors and other users by providing easy-to-follow guides, resources, and community support for navigating the digital world safely and confidently.
 
 ## Table of Contents
@@ -19,6 +21,12 @@ Welcome to the **Digital Inclusion Hub**! This project aims to empower seniors a
 - **Responsive Design**: Optimized for both desktop and mobile devices, ensuring accessibility for all users.
 
 ## Technologies Used
+
+![React Logo](https://example.com/react-logo.png) <!-- Replace with actual React logo URL -->
+![TypeScript Logo](https://example.com/typescript-logo.png) <!-- Replace with actual TypeScript logo URL -->
+![Tailwind CSS Logo](https://example.com/tailwind-logo.png) <!-- Replace with actual Tailwind CSS logo URL -->
+![Vite Logo](https://example.com/vite-logo.png) <!-- Replace with actual Vite logo URL -->
+![Firebase Logo](https://example.com/firebase-logo.png) <!-- Replace with actual Firebase logo URL -->
 
 - **Frontend**: 
   - React
