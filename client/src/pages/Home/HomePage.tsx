@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import { useRef } from 'react'
 import { BookOpen, Shield, CreditCard, Users, Video, Share2 } from 'lucide-react'
 import FeatureCard from './components/FeatureCard'
 import TestimonialCard from './components/TestimonialCard'
