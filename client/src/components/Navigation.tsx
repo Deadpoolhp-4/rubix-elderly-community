@@ -1,6 +1,6 @@
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink, useLocation, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { Home, Shield, BookOpen, CreditCard, Video, Share2, Users } from 'lucide-react'
+import { Home, Shield, BookOpen, CreditCard, Video, Share2, Users, Info } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Navigation = () => {
@@ -36,7 +36,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2">
             <motion.div
               whileHover={{ scale: 0.9 }}
               whileTap={{ scale: 0.9 }}
@@ -44,14 +44,16 @@ const Navigation = () => {
             >
               <Home className="w-6 h-6 text-white" />
             </motion.div>
-            <h1 className="text-2xl font-bold text-text-primary">
+            <h1 className="text-xl font-bold text-text-primary ">
               Digital 
-              <br></br>Inclusion Hub
+              
+              Inclusion Hub
             </h1>
+            
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ml-4">
             {navItems.map(item => (
               <NavLink
                 key={item.path}
@@ -78,7 +80,17 @@ const Navigation = () => {
                   </>
                 )}
               </NavLink>
+              
             ))}
+            <Link 
+              to="/about" 
+              className="text-text-secondary hover:text-primary transition-colors"
+              aria-label="About us"
+            >
+              <Info className="w-5 h-5 ml-2" />
+            </Link>
+            
+
           </div>
 
           {/* Mobile Menu Button */}

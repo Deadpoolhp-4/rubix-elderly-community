@@ -8,6 +8,7 @@ import SafetyPage from './pages/Safety/SafetyPage'
 import VideoCallsPage from './pages/VideoCalls/VideoCallsPage'
 import SocialMediaPage from './pages/SocialMedia/SocialMediaPage'
 import ForumsPage from './pages/Community/ForumsPage'
+import AboutPage from './pages/About/AboutPage'
 import { useAuth } from './hooks/useAuth'
 import Footer from './components/Footer'
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Video-Calls" element={<VideoCallsPage />} />
           <Route path="/Social-Media" element={<SocialMediaPage />} />
           <Route path="/Forums" element={user ? <ForumsPage user={user} /> : <Navigate to="/login" />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
         <Footer />
       </div>
